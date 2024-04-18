@@ -1,0 +1,642 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Goldenage4u</title>
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/font-awesome.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-hexashop.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/owl-carousel.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/lightbox.css' %}">
+
+    </head>
+    
+    <body>
+    
+
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+
+    
+    
+
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+
+
+                        <a href="{% url 'home' %}" class="logo">
+
+                            <img src="{% static 'assets/images/logo_gold.jpeg' %}" style="width:100px;height:80px">
+
+                        </a>
+
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="{% url 'home' %}" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'about_us' %}">About Us</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'surgical_view' %}">Surgicals</a></li>
+
+                            <li class="submenu">
+                                <a href="javascript:;">Products</a>
+                                <ul>
+                                    <li><a href="{% url 'new_arrivals' %}">New Arrivals</a></li>
+                                    <li><a href="{% url 'daily_needs' %}">Daily Needs</a></li>
+                                     {% for t in bb %}
+                                    <li><a href="{% url 'product_view' t.id %}">{{t.category_title}}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+
+
+
+
+
+
+
+
+                            &nbsp &nbsp &nbsp &nbsp &nbsp; &nbsp &nbsp
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <br><section class="section" id="men">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-heading">
+                        <h2>Medicines</h2>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="men-item-carousel">
+                        <div class="owl-men-item owl-carousel">
+
+
+
+                            <div class="item">
+                                <div class="thumb">
+
+
+
+
+
+                                    <img src="{% static 'assets/images/medicine1.jpg' %}" alt="" style="width:365px;height:370px">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Free door step delivery</h4>
+                                    <span style="color:darkorange">Call Us: 98957 08875 / Message Us: 98957 08875</span>
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+
+                                    </div>
+                                    <img src="{% static 'assets/images/medicine2.jpg' %}" alt="" style="width:365px;height:370px">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Free door step delivery</h4>
+                                    <span style="color:darkorange">Call Us: 98957 08875 / Message Us: 98957 08875</span>
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+
+
+                                    </div>
+                                    <img src="{% static 'assets/images/medicine3.jpg' %}" alt="" style="width:365px;height:370px">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Free door step delivery</h4>
+                                    <span style="color:darkorange">Call Us: 98957 08875 / Message Us: 98957 08875</span>
+
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+
+
+                                    </div>
+                                    <img src="{% static 'assets/images/medicine4.jpg' %}" alt="" style="width:365px;height:370px">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Free door step delivery</h4>
+                                    <span style="color:darkorange">Call Us: 98957 08875 / Message Us: 98957 08875</span>
+
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="women">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-heading">
+                        <h2>Opticals</h2>
+                        <span>Brands - Aqua Soft, Silk Lens</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="women-item-carousel">
+                        <div class="owl-women-item owl-carousel">
+
+
+
+
+
+
+
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+
+                                    </div>
+                                    <img src="{% static 'assets/images/spes_frame.jpg' %}" alt=""  style="width:365px;height:370px">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Frame price starts from</h4>
+                                    <span style="color:darkorange">₹600</span>
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+
+                                    </div>
+                                    <img src="{% static 'assets/images/contact_lens.jpg' %}" alt="" style="width:365px;height:370px">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Contact lens price starts from</h4>
+                                    <span style="color:darkorange">₹300</span>
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+
+                                    </div>
+                                    <img src="{% static 'assets/images/cleaning_liquid.jpg' %}" alt="" style="width:365px;height:370px">
+                                </div>
+                                <div class="down-content">
+                                     <h4>Cleaning liquid price starts from</h4>
+                                    <span style="color:darkorange">₹150(125 ml)</span>
+
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="section" id="kids">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-heading">
+                        <h2>Wheel chairs / Walkers</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="kid-item-carousel">
+                        <div class="owl-kid-item owl-carousel">
+
+
+
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+
+                                    </div>
+                                    <img src="{% static 'assets/images/wheel_chair.jpg' %}" alt="" style="width:365px;height:370px">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Free door step delivery</h4>
+                                    <span style="color:darkorange">Call Us: 98957 08875 / Message Us: 98957 08875</span>
+
+                                </div>
+                            </div>
+
+
+
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+
+                                    </div>
+                                    <img src="{% static 'assets/images/walker.jpg' %}" alt="" style="width:365px;height:370px">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Free door step delivery</h4>
+                                    <span style="color:darkorange">Call Us: 98957 08875 / Message Us: 98957 08875</span>
+
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+
+                                    </div>
+                                    <img src="{% static 'assets/images/wheel_chair1.jpg' %}" alt="" style="width:365px;height:370px">
+                                </div>
+                                <div class="down-content">
+                                   <h4>Free door step delivery</h4>
+                                    <span style="color:darkorange">Call Us: 98957 08875 / Message Us: 98957 08875</span>
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="kids">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-heading">
+                        <h2>Knee Supporters / Colars</h2>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="kid-item-carousel">
+                        <div class="owl-kid-item owl-carousel">
+
+
+
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+
+                                    </div>
+                                    <img src="{% static 'assets/images/knee_supporter.jpg' %}" alt="" style="width:365px;height:370px">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Free door step delivery</h4>
+                                    <span style="color:darkorange">Call Us: 98957 08875 / Message Us: 98957 08875</span>
+
+                                </div>
+                            </div>
+
+
+
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+
+                                    </div>
+                                    <img src="{% static 'assets/images/colar.jpg' %}" alt="" style="width:365px;height:370px">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Free door step delivery</h4>
+                                    <span style="color:darkorange">Call Us: 98957 08875 / Message Us: 98957 08875</span>
+
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+
+                                    </div>
+                                    <img src="{% static 'assets/images/knee_supporter1.jpg' %}" alt="" style="width:365px;height:370px">
+                                </div>
+                                <div class="down-content">
+                                   <h4>Free door step delivery</h4>
+                                    <span style="color:darkorange">Call Us: 98957 08875 / Message Us: 98957 08875</span>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="kids">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-heading">
+                        <h2>Mattresses</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="kid-item-carousel">
+                        <div class="owl-kid-item owl-carousel">
+
+
+
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+
+                                    </div>
+                                    <img src="{% static 'assets/images/medical_mattress1.jpg' %}" alt="" style="width:365px;height:370px">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Free door step delivery</h4>
+                                    <span style="color:darkorange">Call Us: 98957 08875 / Message Us: 98957 08875</span>
+
+                                </div>
+                            </div>
+
+
+
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+
+                                    </div>
+                                    <img src="{% static 'assets/images/medical_mattress2.jpg' %}" alt="" style="width:365px;height:370px">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Free door step delivery</h4>
+                                    <span style="color:darkorange">Call Us: 98957 08875 / Message Us: 98957 08875</span>
+
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+
+                                    </div>
+                                    <img src="{% static 'assets/images/medical_mattress3.jpg' %}" alt="" style="width:365px;height:370px">
+                                </div>
+                                <div class="down-content">
+                                   <h4>Free door step delivery</h4>
+                                    <span style="color:darkorange">Call Us: 98957 08875 / Message Us: 98957 08875</span>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="kids">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-heading">
+                        <h2>Diapers</h2>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="kid-item-carousel">
+                        <div class="owl-kid-item owl-carousel">
+
+
+
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+
+                                    </div>
+                                    <img src="{% static 'assets/images/diaper1.jpg' %}" alt="" style="width:365px;height:370px">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Free door step delivery</h4>
+                                    <span style="color:darkorange">Call Us: 98957 08875 / Message Us: 98957 08875</span>
+
+                                </div>
+                            </div>
+
+
+
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+
+                                    </div>
+                                    <img src="{% static 'assets/images/diaper2.jpg' %}" alt="" style="width:365px;height:370px">
+                                </div>
+                                <div class="down-content">
+                                    <h4>Free door step delivery</h4>
+                                    <span style="color:darkorange">Call Us: 98957 08875 / Message Us: 98957 08875</span>
+
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+
+                                    </div>
+                                    <img src="{% static 'assets/images/diaper3.jpg' %}" alt="" style="width:365px;height:370px">
+                                </div>
+                                <div class="down-content">
+                                   <h4>Free door step delivery</h4>
+                                    <span style="color:darkorange">Call Us: 98957 08875 / Message Us: 98957 08875</span>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="{% static 'assets/js/jquery-2.1.0.min.js' %}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{% static 'assets/js/popper.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+
+    <!-- Plugins -->
+    <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+    <script src="{% static 'assets/js/accordions.js' %}"></script>
+    <script src="{% static 'assets/js/datepicker.js' %}"></script>
+    <script src="{% static 'assets/js/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'assets/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'assets/js/imgfix.min.js' %}"></script>
+    <script src="{% static 'assets/js/slick.js' %}"></script>
+    <script src="{% static 'assets/js/lightbox.js' %}"></script>
+    <script src="{% static 'assets/js/isotope.js' %}"></script>
+    
+    <!-- Global Init -->
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+
+    <script>
+
+        $(function() {
+            var selectedClass = "";
+            $("p").click(function(){
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("."+selectedClass).fadeOut();
+            setTimeout(function() {
+              $("."+selectedClass).fadeIn();
+              $("#portfolio").fadeTo(50, 1);
+            }, 500);
+                
+            });
+        });
+
+    </script>
+
+  </body>
+</html>

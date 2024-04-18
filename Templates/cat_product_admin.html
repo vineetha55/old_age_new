@@ -1,0 +1,130 @@
+{% load static %}
+<html lang="en">
+  <head>
+  	<title>Products</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="{% static 'tabble/css/style.css' %}">
+
+	</head>
+	<body>
+
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">PRODUCTS</h2>
+
+                    <div style="color:blue;" align="center">
+                        {% if messages %}
+                            {% for msg in messages %}
+                                    {{ msg }}
+                            {% endfor %}
+                        {% endif %}
+			        </div>
+
+				</div>
+
+			</div>
+
+			{% if hh %}
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="table-wrap">
+						<table class="table table-bordered table-dark table-hover">
+						  <thead>
+						    <tr>
+
+                                <th>
+                                    Category
+                                </th>
+
+								 <th>
+                                    Product name
+                                </th>
+
+								<th>
+                                    Image
+                                </th>
+
+								<th>
+                                    Price
+                                </th>
+
+								<th>
+                                    discount (if any)
+                                </th>
+
+						    </tr>
+						  </thead>
+
+						  <tbody>
+
+						 	{% for i in hh %}
+						    <tr>
+
+                              <td>
+                                  {{i.prd_cat.category_title}}
+                              </td>
+
+							  <td>
+                                  {{i.name}}
+                              </td>
+
+							   <td>
+                                  <img src="{{i.image.url}}" alt="No image" style="width:150px;height:150px">
+                              </td>
+
+							  <td>
+                                   ₹{{i.unit_price}}
+                              </td>
+
+							  <td>
+                                  {{i.discount}}
+                              </td>
+
+                              <td>
+                                  <button type="button" onclick="location.href='{% url 'edit_prod_adm' i.id %}'" name='t_h'>Edit</button>
+                              </td>
+
+                              <td>
+                                  <button type="button" onclick="location.href='{% url  'delete_prod_adm' i.id %}'" name='del'>Delete</button>
+                              </td>
+
+						    </tr>
+						  {% endfor %}
+
+						  </tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			{% else %}
+
+			<h1 align="center" style="color:blue">No products added</h1>
+
+			{% endif %}
+
+		</div>
+		<br><br>
+		<div align="center">
+          <button type="button" onclick="location.href='{% url 'add_prod_adm' %}'" name='mybtn2'>Add</button>&nbsp&nbsp&nbsp&nbsp&nbsp
+			<button type="button" onclick="location.href='{% url 'cat_admin' %}'" name='mybtn2'>Back</button>
+		</div>
+	</section>
+
+	<script src="{% static 'tabble/js/jquery.min.js' %}"></script>
+  <script src="{% static 'tabble/js/popper.js' %}"></script>
+  <script src="{% static 'tabble/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'tabble/js/main.js' %}"></script>
+
+	</body>
+</html>
+

@@ -1,0 +1,800 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Other products</title>
+
+
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/font-awesome.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-hexashop.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/owl-carousel.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/lightbox.css' %}">
+
+    </head>
+
+    <body>
+
+
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+
+
+
+
+                        {% if user.is_authenticated %}
+
+
+                        <a href="{% url 'admin_home' %}" class="logo">
+
+                            <img src="{% static 'assets/images/logo_gold.jpeg' %}" style="width:100px;height:80px">
+
+                        </a>
+
+                        {% else %}
+
+
+                         <a href="{% url 'home' %}" class="logo">
+
+                            <img src="{% static 'assets/images/logo_gold.jpeg' %}" style="width:100px;height:80px">
+
+                        </a>
+
+
+                        {% endif %}
+
+
+
+
+
+                        <ul class="nav">
+
+                               {% if user.is_authenticated %}
+                                <li class="scroll-to-section"><a href="{% url 'admin_home' %}" class="active">Home</a></li>
+                                    {% else %}
+                                <li class="scroll-to-section"><a href="{% url 'home' %}" class="active">Home</a></li>
+                                 {% endif %}
+
+                            <li class="scroll-to-section"><a href="{% url 'about_us' %}">About Us</a></li>
+                             <li class="scroll-to-section"><a href="{% url 'surgical_view' %}">Surgicals</a></li>
+
+
+
+                            <li class="submenu">
+                                <a href="javascript:;">Products</a>
+                                <ul>
+                                    <li><a href="{% url 'new_arrivals' %}">New Arrivals</a></li>
+                                    <li><a href="{% url 'daily_needs' %}">Daily Needs</a></li>
+                                     {% for t in bb %}
+                                    <li><a href="{% url 'product_view' t.id %}">{{t.category_title}}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+
+
+
+
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <section class="section" id="products" style="margin-top:20px;">
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h2>Other products</h2>
+                        <span>Free door step delivery. Call Us: 98957 08875 / Message Us: 98957 08875</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Tongue Depressor Genius.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Tongue Depressor Genius</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Exercising ball gel.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Exercising ball gel</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Exercising ball rubber.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Exercising ball rubber</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/One call plus Gluco Meter.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>One call plus Gluco Meter</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/One call plus Strip.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>One call plus Strip</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Gluco one Meter.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Gluco one Meter</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Gluco one strip BG -03.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Gluco one strip BG -03</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Glucose.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Glucose</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Scanning gel 250ml.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Scanning gel 250ml</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Scanning gel 5 Ltr.jpeg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Scanning gel 5 Ltr</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Bed Pan( Fiber, Steel, Plastic).jpeg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Bed Pan( Fiber, Steel, Plastic)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Spittoon cup.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Spittoon cup</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Split easy genius.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Split easy genius</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+               <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Ice bag genius.jpeg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Ice bag genius</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Pill box genius.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Pill box genius</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Hospital Bed.png' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Hospital Bed</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Oxygen concentrator.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Oxygen concentrator</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Suction Apparatus.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Suction Apparatus</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Cotton buds wood and paper.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Cotton buds wood and paper</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Weighing Machine Queen N Kurup.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Weighing Machine Queen N Krups</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Apron PVC Regular Genius.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Apron PVC Regular Genius</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Finger Exercise Genius.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Finger Exercise Genius</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Weighing Machine Kurup Square.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Weighing Machine Krup Square </h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Dispensing Cup ( 25ml,60ml, 125ml, 200ml).jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Dispensing Cup ( 25ml,60ml, 125ml, 200ml)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Enimaset.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Enema set</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Uri Cond (Medium,Large).png' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Uri Cond (Medium,Large)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Cuticell.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Cuticell</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/ECG gel 250ml.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>ECG gel 250ml</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Ultrasound gel (250ml, 5L).jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Ultrasound gel (250ml, 5L)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/C-pap and Bi-pap.png' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>C-pap and Bi-pap</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Bactigras.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Bactigras</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                   <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Rubberised textile Fabric (1M, 2M).jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Rubberised textile Fabric (1M, 2M)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Patient ID Band.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Patient ID Band</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                   <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Pregency Card.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Pregency Card</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                   <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Vigore Condoms.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Vigore Condoms</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/ORS Gelyte.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>ORS Gelyte</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                    <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Germ I Fresh.png' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Germ I Fresh</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Urinal Brown.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Urinal Brown</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Urinal White Male & Female.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Urinal White Male & Female</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                   <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Airbed Lifecare.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Airbed Lifecare</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                   <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Airbed Naulakha.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Airbed Naulakha</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Airbed Smartcare.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Airbed Smartcare</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                   <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Spitton Cup.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Spitton Cup</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                     <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Glycerin IP (100gm, 400gm).jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Glycerin IP (100gm, 400gm)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <script src="{% static 'assets/js/jquery-2.1.0.min.js' %}"></script>
+
+
+    <script src="{% static 'assets/js/popper.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+
+
+    <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+    <script src="{% static 'assets/js/accordions.js' %}"></script>
+    <script src="{% static 'assets/js/datepicker.js' %}"></script>
+    <script src="{% static 'assets/js/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'assets/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'assets/js/imgfix.min.js' %}"></script>
+    <script src="{% static 'assets/js/slick.js' %}"></script>
+    <script src="{% static 'assets/js/lightbox.js' %}"></script>
+    <script src="{% static 'assets/js/isotope.js' %}"></script>
+
+
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+
+    <script>
+
+        $(function() {
+            var selectedClass = "";
+            $("p").click(function(){
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("."+selectedClass).fadeOut();
+            setTimeout(function() {
+              $("."+selectedClass).fadeIn();
+              $("#portfolio").fadeTo(50, 1);
+            }, 500);
+
+            });
+        });
+
+    </script>
+
+  </body>
+
+</html>

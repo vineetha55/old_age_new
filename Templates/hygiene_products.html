@@ -1,0 +1,536 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Hygiene products</title>
+
+
+
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/font-awesome.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-hexashop.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/owl-carousel.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/lightbox.css' %}">
+
+    </head>
+
+    <body>
+
+
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+
+
+
+
+                         {% if user.is_authenticated %}
+
+                        <a href="{% url 'admin_home' %}" class="logo">
+
+                            <img src="{% static 'assets/images/logo_gold.jpeg' %}" style="width:100px;height:80px">
+
+                        </a>
+
+                        {% else %}
+
+
+                        <a href="{% url 'home' %}" class="logo">
+
+                            <img src="{% static 'assets/images/logo_gold.jpeg' %}" style="width:100px;height:80px">
+
+                        </a>
+
+
+                        {% endif %}
+
+
+
+
+
+                        <ul class="nav">
+
+                               {% if user.is_authenticated %}
+                                <li class="scroll-to-section"><a href="{% url 'admin_home' %}" class="active">Home</a></li>
+                                    {% else %}
+                                <li class="scroll-to-section"><a href="{% url 'home' %}" class="active">Home</a></li>
+                                 {% endif %}
+
+                            <li class="scroll-to-section"><a href="{% url 'about_us' %}">About Us</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'surgical_view' %}">Surgicals</a></li>
+
+
+
+                            <li class="submenu">
+                                <a href="javascript:;">Products</a>
+                                <ul>
+                                    <li><a href="{% url 'new_arrivals' %}">New Arrivals</a></li>
+                                    <li><a href="{% url 'daily_needs' %}">Daily Needs</a></li>
+                                     {% for t in bb %}
+                                    <li><a href="{% url 'product_view' t.id %}">{{t.category_title}}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+
+
+
+
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+    <section class="section" id="products" style="margin-top:20px;">
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h2>Hygiene products</h2>
+                        <span>Free door step delivery. Call Us: 98957 08875 / Message Us: 98957 08875</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+
+
+
+
+
+
+
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Spirit 100ml,400ml.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Spirit 100ml,400ml</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Cotton Buds Kiwi.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Cotton Buds Kiwi</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Cotton Buds Shivarch.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Cotton Buds Shivarch</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Tissues Novel Box.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Tissues Novel Box</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/NAP Handwash 300ml.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>NAP Handwash 300ml</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Ecobath Wipes.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Ecobath Wipes</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Body Wipes Voksen Nap.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Body Wipes Voksen Nap</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Body Wipes Medibath.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Body Wipes Medibath</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Napclean Sanitizer 5LT.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Napclean Sanitizer 5LT</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Napclean Sanitizer (50ml,100ml, 500ml , 5L).jpeg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Napclean Sanitizer (50ml,100ml, 500ml , 5L)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Yardley Sanitizer 60ml.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Yardley Sanitizer 60ml</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Napclean Rub Sanitizer 100ml.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Napclean Rub Sanitizer 100ml</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Hygine Sanitizer 50ml.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Hygienix Sanitizer 50ml</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+               <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Nap Microseptol (100ml,200ml, 500ml).png' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Nap Microseptol (100ml,200ml, 500ml)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Menstrual Cup VSEI M.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Menstrual Cup VSEI M</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Menstrual Cup Elaina (M,L).jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Menstrual Cup Elaina (M,L)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Menstrual Cup Emina(S,M,L).jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Menstrual Cup Emina(S,M,L)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Menstrual Cup Wash.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Menstrual Cup Wash</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Menstrual cup Daynacare (S,M,L).jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Menstrual cup Daynacare (S,M,L)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Menstrual Cup Menosafe(M,L).jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Menstrual Cup Menosafe(M,L)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Menstrual Menosafe Cleanser.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Menstrual Menosafe Cleanser</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Bouffant Cap Carefor.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Bouffant Cap Carefor</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Sanitory Comfort RIO 6.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Sanitory Comfort RIO 6</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Maternity pads.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Maternity pads</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Povidone Iodine (100ml, 500ml).jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Povidone Iodine (100ml, 500ml)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <script src="{% static 'assets/js/jquery-2.1.0.min.js' %}"></script>
+
+
+    <script src="{% static 'assets/js/popper.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+
+
+    <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+    <script src="{% static 'assets/js/accordions.js' %}"></script>
+    <script src="{% static 'assets/js/datepicker.js' %}"></script>
+    <script src="{% static 'assets/js/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'assets/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'assets/js/imgfix.min.js' %}"></script>
+    <script src="{% static 'assets/js/slick.js' %}"></script>
+    <script src="{% static 'assets/js/lightbox.js' %}"></script>
+    <script src="{% static 'assets/js/isotope.js' %}"></script>
+
+
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+
+    <script>
+
+        $(function() {
+            var selectedClass = "";
+            $("p").click(function(){
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("."+selectedClass).fadeOut();
+            setTimeout(function() {
+              $("."+selectedClass).fadeIn();
+              $("#portfolio").fadeTo(50, 1);
+            }, 500);
+
+            });
+        });
+
+    </script>
+
+  </body>
+
+</html>

@@ -1,0 +1,886 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Syringes and other disposables</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/font-awesome.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-hexashop.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/owl-carousel.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/lightbox.css' %}">
+
+    </head>
+
+    <body>
+
+
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+
+
+
+                          {% if user.is_authenticated %}
+
+
+                        <a href="{% url 'admin_home' %}" class="logo">
+
+                            <img src="{% static 'assets/images/logo_gold.jpeg' %}" style="width:100px;height:80px">
+
+                        </a>
+
+
+                        {% else %}
+
+
+
+                        <a href="{% url 'home' %}" class="logo">
+
+                            <img src="{% static 'assets/images/logo_gold.jpeg' %}" style="width:100px;height:80px">
+
+                        </a>
+
+
+
+                        {% endif %}
+
+                        <ul class="nav">
+
+                             {% if user.is_authenticated %}
+                                <li class="scroll-to-section"><a href="{% url 'admin_home' %}" class="active">Home</a></li>
+                            {% else %}
+                                <li class="scroll-to-section"><a href="{% url 'home' %}" class="active">Home</a></li>
+                            {% endif %}
+
+                            <li class="scroll-to-section"><a href="{% url 'about_us' %}">About Us</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'surgical_view' %}">Surgicals</a></li>
+
+
+
+
+                            <li class="submenu">
+                                <a href="javascript:;">Products</a>
+                                <ul>
+                                    <li><a href="{% url 'new_arrivals' %}">New Arrivals</a></li>
+                                    <li><a href="{% url 'daily_needs' %}">Daily Needs</a></li>
+                                     {% for t in bb %}
+                                    <li><a href="{% url 'product_view' t.id %}">{{t.category_title}}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+
+
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <section class="section" id="products" style="margin-top:20px;">
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h2>Syringes and Other Disposables</h2>
+                        <span>Free door step delivery. Call Us: 98957 08875 / Message Us: 98957 08875</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Dispovan_syringe_1ml_U40 (100s).jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Dispovan syringe 1ml U40 (100's)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Dispovan syringe 1ml U100(100s).jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Dispovan syringe 1ml U100(100's)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Dispovan syringe 1ml Single U40.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Dispovan syringe 1ml Single U40</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Dispovan syringe 1ml Single U100.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Dispovan syringe 1ml Single U100</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Dispovan syringe 1ml Multi U40 (100s).jpeg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Dispovan syringe 1ml Multi U40 (100's)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Dispovan syringe 1ml Multi U100(100s).jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Dispovan syringe 1ml Multi U100(100's)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Dispovan.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Dispovan syringe 1ml Insulin 26*1/2</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Dispovan syringe 1ml TB 2612.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Dispovan syringe 1ml TB 26*1/2</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Dispovan 2.5ml 241.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Dispovan 2.5ml 24*1</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Dispovan 2.5ml without needle.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Dispovan 2.5ml without needle</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Dispovan 3ml 241.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Dispovan 3ml 24*1</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Dispovan 5ml 241 (100s).jpeg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Dispovan 5ml 24*1 (100's)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Dispovan 10ml.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Dispovan 10ml</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Dispovan 20ml.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Dispovan 20ml</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                    <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Dispovan 50ml without needle.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Dispovan 50ml without needle</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Dispovan 50ml irrigation.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Dispovan 50ml irrigation</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                   <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Nipro Syringes.png' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Nipro Syringes</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Dispovan Needle 181 12.png' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Dispovan Needle 18*1 1/2</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Dispovan Needle 221.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Dispovan Needle 22*1</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Dispovan Needle 231.png' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Dispovan Needle 23*1</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                    <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Dispovan Needle 2612.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Dispovan Needle 26*1/2</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/BD 1ml Multipack 31G.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>BD 1ml Multipack 31G</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/BD Pen needle 31G.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>BD Pen needle 31G</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                   <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Dispovan Pen needle.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Dispovan Pen needle</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Glycerine Syringe.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Glycerine Syringe</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Urobag Romo 10.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Urobag Romo 10</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Cadi V Infusion set Deluxe.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Cadi V Infusion set Deluxe</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Casiflo Urinebag.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Casiflo Urinebag</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/IV Set Romson.jpeg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>IV Set Romson</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Kitkath IV Canula 24.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Kitkath IV Canula 24</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Kitkath IV Canula 20.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Kitkath IV Canula 20</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Kitkath IV Canula 22.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Kitkath IV Canula 22</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Suction Catheter.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Suction Catheter</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                   <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Foleys Catheter.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Foleys Catheter</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Nelaton Catheter.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Nelaton Catheter</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Ryles tube.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Ryles tube</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Feeding tube.png' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Feeding tube</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Pediadrip Set.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Pediadrip Set</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Respirometer.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Respirometer</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Colobag.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Colobag</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Colostomy Kit.jpeg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Colostomy Kit</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Click Clamb.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Click Clamb</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                    <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Romovac Set.png' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Romovac Set</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Vaccu Sucker.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Vaccu Sucker</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Nebuliser Mask Adult.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Nebuliser Mask Adult</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Nebuliser Mask Child.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Nebuliser Mask Child</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Flexi Mask Adult.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Flexi Mask Adult</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                   <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Flexi Mask Child.png' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Flexi Mask Child</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/IV Canula Vasofix B Braun.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>IV Canula Vasofix B Braun</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Introcan B Braun.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Introcan B Braun</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <script src="{% static 'assets/js/jquery-2.1.0.min.js' %}"></script>
+
+
+    <script src="{% static 'assets/js/popper.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+
+
+    <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+    <script src="{% static 'assets/js/accordions.js' %}"></script>
+    <script src="{% static 'assets/js/datepicker.js' %}"></script>
+    <script src="{% static 'assets/js/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'assets/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'assets/js/imgfix.min.js' %}"></script>
+    <script src="{% static 'assets/js/slick.js' %}"></script>
+    <script src="{% static 'assets/js/lightbox.js' %}"></script>
+    <script src="{% static 'assets/js/isotope.js' %}"></script>
+
+
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+
+    <script>
+
+        $(function() {
+            var selectedClass = "";
+            $("p").click(function(){
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("."+selectedClass).fadeOut();
+            setTimeout(function() {
+              $("."+selectedClass).fadeIn();
+              $("#portfolio").fadeTo(50, 1);
+            }, 500);
+
+            });
+        });
+
+    </script>
+
+  </body>
+
+</html>

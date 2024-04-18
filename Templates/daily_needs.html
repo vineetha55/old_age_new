@@ -1,0 +1,617 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Daily needs</title>
+
+
+
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/font-awesome.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-hexashop.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/owl-carousel.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/lightbox.css' %}">
+
+    </head>
+
+    <body>
+
+
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+
+
+                         {% if user.is_authenticated %}
+
+                        <a href="{% url 'admin_home' %}" class="logo">
+
+                            <img src="{% static 'assets/images/logo_gold.jpeg' %}" style="width:100px;height:80px">
+
+                        </a>
+
+
+                        {% else %}
+
+
+                          <a href="{% url 'home' %}" class="logo">
+
+                            <img src="{% static 'assets/images/logo_gold.jpeg' %}" style="width:100px;height:80px">
+
+                        </a>
+
+
+                        {% endif %}
+
+
+
+
+
+
+
+                        <ul class="nav">
+
+                             {% if user.is_authenticated %}
+                                <li class="scroll-to-section"><a href="{% url 'admin_home' %}" class="active">Home</a></li>
+                                    {% else %}
+                                <li class="scroll-to-section"><a href="{% url 'home' %}" class="active">Home</a></li>
+                                 {% endif %}
+
+                            <li class="scroll-to-section"><a href="{% url 'about_us' %}">About Us</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'surgical_view' %}">Surgicals</a></li>
+
+
+
+                            <li class="submenu">
+                                <a href="javascript:;">Products</a>
+                                <ul>
+                                    <li><a href="{% url 'new_arrivals' %}">New Arrivals</a></li>
+                                    <li><a href="{% url 'daily_needs' %}">Daily Needs</a></li>
+                                     {% for t in bb %}
+                                    <li><a href="{% url 'product_view' t.id %}">{{t.category_title}}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+
+
+
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section" id="products" style="margin-top:20px;">
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h2>Daily needs</h2>
+                        <span>Free door step delivery. Call Us: 98957 08875 / Message Us: 98957 08875</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+
+
+
+
+
+
+
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Adult Diaper Finecare 5s(M,L).jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Adult Diaper Finecare 5's(M,L)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Adult Diaper Finecare 10s (XL).jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Adult Diaper Finecare 10's (XL)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Adult Diaper Finecare Pull up 10s (SM, LXL).jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Adult Diaper Finecare Pull up 10's (S/M, L/XL)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Adult Diaper Lifecare(M,L,XL).jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Adult Diaper Lifecare(M,L,XL)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Baby Diaper Teddy New Born 9nos.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Baby Diaper Teddy New Born 9nos</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Baby Diaper Teddy Small (5,42).jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Baby Diaper Teddy Small (5,42)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Baby Diaper Teddy Medium(2,5,26).jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Baby Diaper Teddy Medium(2,5,26)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+                   <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Dispovan_syringe_1ml_U40 (100s).jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Dispovan syringe 1ml U40 (100's)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Dispovan syringe 1ml U100(100s).jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Dispovan syringe 1ml U100(100's)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Dispovan syringe 1ml Single U40.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Dispovan syringe 1ml Single U40</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Dispovan syringe 1ml Single U100.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Dispovan syringe 1ml Single U100</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+                   <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Walker with Wheel LC 912 L 5.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Walker with Wheel LC 912 L 5"</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+                    <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Disposable Mask D Guard.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Disposable Mask D Guard</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Disposable Mask Black.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Disposable Mask Black</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Disposable Mask Kids Plain and Strip.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Disposable Mask Kids Plain and Strip</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                    <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Examination gloves Crystal (S, M, L).jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Examination gloves Crystal (S, M, L)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Examination gloves Kaltex Plus (M, L).jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Examination gloves Kaltex Plus (M, L)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Surgicare Sterile Gloves (6.5,7).jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Surgicare Sterile Gloves (6.5,7)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                    <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Medigrip Spot.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Medigrip Spot</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Medigrip Waterpoof.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Medigrip Waterpoof</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Medigrip Bandaid.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Medigrip Bandaid</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Adult Diaper Finecare 10s (XL).jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Adult Diaper Finecare 10's (XL)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Adult Diaper Finecare Pull up 10s (SM, LXL).jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Adult Diaper Finecare Pull up 10's (S/M, L/XL)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Adult Diaper Lifecare(M,L,XL).jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Adult Diaper Lifecare(M,L,XL)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Knee Support Classic.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Knee Support Classic</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Knee Support 3D Single.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Knee Support 3D Single</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Ankle Support.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Ankle Support</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <script src="{% static 'assets/js/jquery-2.1.0.min.js' %}"></script>
+
+
+    <script src="{% static 'assets/js/popper.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+
+
+    <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+    <script src="{% static 'assets/js/accordions.js' %}"></script>
+    <script src="{% static 'assets/js/datepicker.js' %}"></script>
+    <script src="{% static 'assets/js/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'assets/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'assets/js/imgfix.min.js' %}"></script>
+    <script src="{% static 'assets/js/slick.js' %}"></script>
+    <script src="{% static 'assets/js/lightbox.js' %}"></script>
+    <script src="{% static 'assets/js/isotope.js' %}"></script>
+
+
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+
+    <script>
+
+        $(function() {
+            var selectedClass = "";
+            $("p").click(function(){
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("."+selectedClass).fadeOut();
+            setTimeout(function() {
+              $("."+selectedClass).fadeIn();
+              $("#portfolio").fadeTo(50, 1);
+            }, 500);
+
+            });
+        });
+
+    </script>
+
+  </body>
+
+</html>

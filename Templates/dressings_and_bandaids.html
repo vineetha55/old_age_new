@@ -1,0 +1,637 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Dressings and bandaids</title>
+
+
+
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/font-awesome.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-hexashop.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/owl-carousel.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/lightbox.css' %}">
+
+    </head>
+
+    <body>
+
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+
+
+
+                        {% if user.is_authenticated %}
+
+                        <a href="{% url 'admin_home' %}" class="logo">
+
+                            <img src="{% static 'assets/images/logo_gold.jpeg' %}" style="width:100px;height:80px">
+
+                        </a>
+
+                        {% else %}
+
+
+                        <a href="{% url 'home' %}" class="logo">
+
+                            <img src="{% static 'assets/images/logo_gold.jpeg' %}" style="width:100px;height:80px">
+
+                        </a>
+
+
+                        {% endif %}
+
+
+
+                        <ul class="nav">
+
+                               {% if user.is_authenticated %}
+                                <li class="scroll-to-section"><a href="{% url 'admin_home' %}" class="active">Home</a></li>
+                                    {% else %}
+                                <li class="scroll-to-section"><a href="{% url 'home' %}" class="active">Home</a></li>
+                                 {% endif %}
+
+                            <li class="scroll-to-section"><a href="{% url 'about_us' %}">About Us</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'surgical_view' %}">Surgicals</a></li>
+
+
+
+                            <li class="submenu">
+                                <a href="javascript:;">Products</a>
+                                <ul>
+                                    <li><a href="{% url 'new_arrivals' %}">New Arrivals</a></li>
+                                    <li><a href="{% url 'daily_needs' %}">Daily Needs</a></li>
+                                     {% for t in bb %}
+                                    <li><a href="{% url 'product_view' t.id %}">{{t.category_title}}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+
+
+
+
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="section" id="products" style="margin-top:20px;">
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h2>Dressings and bandaids</h2>
+                        <span>Free door step delivery. Call Us: 98957 08875 / Message Us: 98957 08875</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+
+
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Medigrip Spot.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Medigrip Spot</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Medigrip Waterpoof.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Medigrip Waterpoof</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Medigrip Bandaid.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Medigrip Bandaid</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Kwick Aid Waterproof.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Kwick Aid Waterproof</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Deurocrepe Bandage (6,8,10,15cm).jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Deurocrepe Bandage (6,8,10,15cm)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Elocrepe Bandage (6,8,10,15cm).jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Elocrepe Bandage (6,8,10,15cm)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Dressing pad Medicos 7.5cm.png' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Dressing pad Medicos 7.5cm</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Dressing pad Medicos 20cm.png' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Dressing pad Medicos 20cm</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Dressing pad Medicos 15cm10c.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Dressing pad Medicos 15cm*10c</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Dressing pad Medicos 10cm10c.png' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Dressing pad Medicos 10cm*10c</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Medigrip 1.25cm1m.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Medigrip 1.25cm*1m</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Medigrip 2.501cm.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Medigrip 2.50*1cm</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Medigrip Micro Surgical tape ( 1212).jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Medigrip Micro Surgical tape ( 1/2", 1",2")</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Medigrip Elastic Adhesive Band BP101.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Medigrip Elastic Adhesive Band BP10*1</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                    <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Medigrip Elastic Adhesive Band BP104.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Medigrip Elastic Adhesive Band BP10*4</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Medigrip Elastic Adhesive Band BP 8cm4m.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Medigrip Elastic Adhesive Band BP 8cm*4m</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                   <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Absorbent Gauze 5cm3mt First Q.jpeg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Absorbent Gauze 5cm*3mt First Q</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Absorbent Gauze 7.5cm3m First Q.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Absorbent Gauze 7.5cm*3m First Q</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Absorbent Gauze 10cm3m First Q.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Absorbent Gauze 10cm*3m First Q</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Absorbent Gauze 15cm3m First Q.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Absorbent Gauze 15cm*3m First Q</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                    <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Disha Crepe (5,7.5,10, 15cm).jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Disha Crepe (5,7.5,10, 15cm)</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Easyfix M.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Easyfix M</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Gauze Swab 7.5cm7.5.png' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Gauze Swab 7.5cm*7.5</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                   <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Gauze Swab 5cm5.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Gauze Swab 5cm*5</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Gauze Swab 10cm10.png' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Gauze Swab 10cm*10</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Eyepad.png' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Eyepad</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Capsicum plaster.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Capsicum plaster</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Belladonna plaster.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Belladonna plaster</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Sterile dressing pad 10cm10cm Medicoz.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Sterile dressing pad 10cm*10cm Medicoz</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Sterile dressing pad 15cm10cm Medicoz.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Sterile dressing pad 15cm*10cm Medicoz</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Sterile dressing pad 20cm10cm Medicoz.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Sterile dressing pad 20cm*10cm Medicoz</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                 <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Sterile dressing pad 7.5cm10cm Medicoz.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Sterile dressing pad 7.5cm*10cm Medicoz</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                  <div class="col-lg-4">
+                    <div class="item">
+                        <div class="thumb">
+                            <div class="hover-content">
+                            </div>
+                            <img src="{% static 'assets/images/Eyepatch.jpg' %}" alt="" style="width:250px;height:250px;">
+                        </div>
+                        <div class="down-content">
+                            <h4>Eyepatch</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <script src="{% static 'assets/js/jquery-2.1.0.min.js' %}"></script>
+
+    <script src="{% static 'assets/js/popper.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+
+    <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+    <script src="{% static 'assets/js/accordions.js' %}"></script>
+    <script src="{% static 'assets/js/datepicker.js' %}"></script>
+    <script src="{% static 'assets/js/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'assets/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'assets/js/imgfix.min.js' %}"></script>
+    <script src="{% static 'assets/js/slick.js' %}"></script>
+    <script src="{% static 'assets/js/lightbox.js' %}"></script>
+    <script src="{% static 'assets/js/isotope.js' %}"></script>
+
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+
+    <script>
+
+        $(function() {
+            var selectedClass = "";
+            $("p").click(function(){
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("."+selectedClass).fadeOut();
+            setTimeout(function() {
+              $("."+selectedClass).fadeIn();
+              $("#portfolio").fadeTo(50, 1);
+            }, 500);
+
+            });
+        });
+
+    </script>
+
+  </body>
+
+</html>
